@@ -1,6 +1,7 @@
 package com.genspark.invoiceAPI.Entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -12,16 +13,21 @@ public class Customer {
     private String lastName;
     private String email;
     private String phone;
+    @OneToMany(
+            mappedBy = "customer"
+    )
+    private List<Invoice> invoices;
 
     public Customer() {
     }
 
-    public Customer(int customerId, String firstName, String lastName, String email, String phone) {
+    public Customer(int customerId, String firstName, String lastName, String email, String phone, List<Invoice> invoices) {
         this.customerId = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phone = phone;
+        this.invoices = invoices;
     }
 
     @Override
@@ -32,6 +38,7 @@ public class Customer {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", invoices=" + invoices +
                 '}';
     }
 }
