@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface InvoiceService {
     List<Invoice> getInvoices();
-    List<Invoice> getInvoicesByCustomerId(int customerId);
     Invoice getInvoiceById(int invoiceId);
     Invoice addInvoice(Invoice invoice);
     Invoice updateInvoice(Invoice invoice);

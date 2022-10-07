@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface InvoiceDao extends JpaRepository<Invoice, Integer> {
-    List<Invoice> findByCustomerId(int customerId);
 }

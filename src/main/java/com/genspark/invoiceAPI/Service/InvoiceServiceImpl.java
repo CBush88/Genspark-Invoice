@@ -19,11 +19,6 @@ public class InvoiceServiceImpl implements InvoiceService {
     }
 
     @Override
-    public List<Invoice> getInvoicesByCustomerId(int customerId) {
-        return this.invoiceDao.findByCustomerId(customerId);
-    }
-
-    @Override
     public Invoice getInvoiceById(int invoiceId) {
         return this.invoiceDao.findById(invoiceId).orElseThrow();
     }

@@ -23,6 +23,38 @@ public class Billable {
         this.billablePrice = billablePrice;
     }
 
+    public int getBillableId() {
+        return billableId;
+    }
+
+    public void setBillableId(int billableId) {
+        this.billableId = billableId;
+    }
+
+    public String getBillableName() {
+        return billableName;
+    }
+
+    public void setBillableName(String billableName) {
+        this.billableName = billableName;
+    }
+
+    public String getBillableDescription() {
+        return billableDescription;
+    }
+
+    public void setBillableDescription(String billableDescription) {
+        this.billableDescription = billableDescription;
+    }
+
+    public double getBillablePrice() {
+        return billablePrice;
+    }
+
+    public void setBillablePrice(double billablePrice) {
+        this.billablePrice = billablePrice;
+    }
+
     @Override
     public String toString() {
         return "Billable{" +
