@@ -1,7 +1,6 @@
 package com.genspark.invoiceAPI.Entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Customer {

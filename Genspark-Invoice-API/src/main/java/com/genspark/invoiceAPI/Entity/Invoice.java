@@ -1,7 +1,5 @@
 package com.genspark.invoiceAPI.Entity;
 
-import org.springframework.beans.factory.annotation.Value;
-
 import javax.persistence.*;
 import java.util.List;
 
