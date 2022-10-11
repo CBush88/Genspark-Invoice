@@ -34,6 +34,7 @@ public class LineItemServiceImpl implements LineItemService {
 
     @Override
     public String deleteLineItem(int lineItemId) {
+        this.lineItemDao.deleteById(lineItemId);
         return "Deleted Successfully";
     }
 }

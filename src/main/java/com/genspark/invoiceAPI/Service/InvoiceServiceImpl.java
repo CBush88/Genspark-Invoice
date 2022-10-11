@@ -35,6 +35,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Override
     public String deleteInvoice(int invoiceId) {
+        this.invoiceDao.deleteById(invoiceId);
         return "Deleted Successfully";
     }
 }

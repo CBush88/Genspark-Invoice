@@ -34,6 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public String deleteCustomer(int customerId) {
+        this.customerDao.deleteById(customerId);
         return "Deleted Successfully";
     }
 }

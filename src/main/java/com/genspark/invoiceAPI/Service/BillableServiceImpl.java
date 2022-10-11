@@ -34,6 +34,7 @@ public class BillableServiceImpl implements BillableService {
 
     @Override
     public String deleteBillable(int billableId) {
+        this.billableDao.deleteById(billableId);
         return "Deleted Successfully";
     }
 }
