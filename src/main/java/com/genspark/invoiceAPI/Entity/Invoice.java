@@ -27,7 +27,7 @@ public class Invoice {
             referencedColumnName = "invoiceId"
     )
     private List<LineItem> lineItems;
-
+    
     private double totalPrice;
 
     public Invoice() {
@@ -38,7 +38,7 @@ public class Invoice {
         this.customer = customer;
         this.status = status;
         this.lineItems = lineItems;
-        this.totalPrice = totalPrice;
+        this.totalPrice = calculateTotalPrice();
     }
 
     public int getInvoiceId() {
@@ -78,7 +78,13 @@ public class Invoice {
     }
 
     public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+        this.totalPrice = calculateTotalPrice();
+    }
+
+    public double calculateTotalPrice(){
+        return lineItems.stream()
+                .mapToDouble(item -> item.getBillable().getBillablePrice() * item.getQuantity())
+                .reduce(Double::sum).orElseThrow();
     }
 
     @Override
