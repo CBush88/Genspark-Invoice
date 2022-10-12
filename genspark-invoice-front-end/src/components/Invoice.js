@@ -6,19 +6,19 @@ const Invoice = (props) => {
     const{invoiceId, customer, status, lineItems, totalPrice} = props.invoice;
   return (
     <>
-        id{invoiceId}
+        Invoice Number: {invoiceId}
         <br />
-        Customer<Customer customer={customer} />
+        Status: {status}
         <br />
-        status {status}
+        Customer: <Customer customer={customer} />
         <br />
-        Line Item{lineItems.map(lineItem => (
+        Line Items: {lineItems.map(lineItem => (
             <span key={lineItem.lineId}> <LineItem lineItem={lineItem} />
             </span>
         )
     )}
         <br />
-        total price{totalPrice}
+        Total Price: {totalPrice}
         <br />
     </>
   )

@@ -7,7 +7,7 @@ const Billable = (props) => {
         <br />
         {props.billable.billableDescription}
         <br />
-        price {props.billable.billablePrice}
+        Price: {props.billable.billablePrice}
         <br />
     </div>
   )
