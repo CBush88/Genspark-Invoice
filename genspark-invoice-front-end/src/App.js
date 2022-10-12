@@ -57,8 +57,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <Router>
+      <Header />
+      <div className='container'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/invoices' element={<Invoices retrieveInvoices={retrieveInvoices} invoices={invoices} setInvoices={setInvoices} /> } />
@@ -66,8 +67,9 @@ function App() {
           <Route path='/billables' element={<Billables retrieveBillables={retrieveBillables} billables={billables} setBillables={setbillables} />} />
           <Route path='/lineitems' element={<LineItems retrieveLineItems={retrieveLineItems} lineItems={lineItems} setLineItems={setLineItems} />} />
         </Routes>
-      </Router>
+      </div>
       <Footer />
+      </Router>
     </div>
   );
 }
