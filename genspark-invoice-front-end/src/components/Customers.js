@@ -9,13 +9,37 @@ const Customers = (props) => {
     }, []);
 
   return (
-    <div>
+    <table className='table table-striped table-sm'>
+        <thead>
+            <tr>
+                <th style={{width:"15%"}}>
+                    First Name
+                </th>
+                <th style={{width:"15%"}}>
+                    Last Name
+                </th>
+                <th style={{width:"15%"}}>
+                    Email Address
+                </th>
+                <th style={{width:"15%"}}>
+                    Phone Number
+                </th>
+            </tr>
+            </thead>
+        <tbody>
         {customersArray.map(customer => (
-            <span key={customer.customerId} >
+            <tr key={customer.customerId} >
                 <Customer customer={customer} />
-            </span>
+                <td style={{width:"10%"}}>
+                    <button>Update</button>
+                </td>
+                <td style={{width:"10%"}}>
+                    <button>Delete</button>
+                </td>
+            </tr>
         ))}
-    </div>
+        </tbody>
+    </table>
   )
 }
 
